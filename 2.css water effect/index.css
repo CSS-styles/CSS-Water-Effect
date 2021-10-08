@@ -1,0 +1,67 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background-color: #262626FF;
+	height: 100vh;
+	width: 100%;
+}
+.water{
+	position: relative;
+	background-color: royalblue;
+	margin: 300px auto;
+	border-radius: 50%;
+	height: 180px;
+	width: 180px;
+	overflow: hidden;
+}
+.water::before{
+	content: '';
+	position: relative;
+	display: block;
+	height: 180px;
+	width: 180px;
+	bottom: -150px;
+	background-color: antiquewhite;
+	box-shadow: 1px 1px 10px deepskyblue,
+				0px 0px 20px deepskyblue,
+				0px 0px 40px deepskyblue;
+	border-radius: 35%;
+	animation: design 4s linear infinite;
+}
+span{
+	position: relative;
+	color: skyblue;
+	font-size: 60px;
+	font-family: sans-serif;
+	font-weight: bolder;
+	top: 250px;
+	left: 35%;
+	text-shadow: 1px 1px 10px deepskyblue,
+				0px 0px 20px deepskyblue,
+				0px 0px 40px deepskyblue;
+}
+@keyframes design{
+	0%{
+		transform: rotate(45deg);
+		bottom: 0;
+	}
+	25%{
+		transform: rotate(90deg);
+		bottom: 50px;
+	}
+	50%{
+		transform: rotate(180deg);
+		bottom: 80px;
+	}
+	75%{
+		transform: rotate(270deg);
+		bottom: 100px;
+	}
+	100%{
+		transform: rotate(360deg);
+		bottom: 130px;
+	}
+}
